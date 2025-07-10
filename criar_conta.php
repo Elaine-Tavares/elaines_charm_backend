@@ -1,4 +1,8 @@
 <?php
+//No InfinityFree, os erros não aparecem diretamente na tela, por segurança. Você precisa ativar a exibição de erros ou usar logs.
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 //Arquivo responsável por receber os dados enviados do formulário React, processar esses dados (validar, verificar duplicidade, salvar no banco)
 
 //Libera o acesso ao PHP a partir de qualquer origem (origem = domínio/site).
