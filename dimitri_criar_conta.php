@@ -1,4 +1,14 @@
 <?php
+//CONFIGURAÇÕES DE CABEÇALHO PARA A RESPOSTA DA API
+// A linha abaixo permite que o seu servidor aceite requisições de qualquer origem (domínio) para o seu backend. Permite que qualquer origem (domínio) acesse este endpoint da API (necessário para requisições de outros domínios).
+header("Access-Control-Allow-Origin: *");
+// Permite que a requisição inclua o cabeçalho 'Content-Type' (necessário para enviar JSON, por exemplo). Define que o servidor aceita o cabeçalho "Content-Type", o que é comum quando estamos recebendo dados em formato JSON de uma requisição (geralmente um POST). Esse cabeçalho permite que a requisição forneça informações sobre o tipo de conteúdo que está sendo enviado (no caso, "application/json").
+header("Access-Control-Allow-Headers: Content-Type");
+// Define que a resposta do servidor será enviada no formato JSON, e não, por exemplo, HTML ou XML.
+header("Content-Type: application/json");
+
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+
 //No InfinityFree, os erros não aparecem diretamente na tela, por segurança. Você precisa ativar a exibição de erros ou usar logs.
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -20,14 +30,6 @@ require './PHPMailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 // Aqui estamos importando a classe Exception, que será usada para capturar e tratar erros que podem ocorrer durante o processo de envio do e-mail, como falhas na autenticação, problemas de conexão, entre outros. A classe Exception ajuda a exibir mensagens de erro amigáveis para o desenvolvedor.
 use PHPMailer\PHPMailer\Exception;
-
-//CONFIGURAÇÕES DE CABEÇALHO PARA A RESPOSTA DA API
-// A linha abaixo permite que o seu servidor aceite requisições de qualquer origem (domínio) para o seu backend. Permite que qualquer origem (domínio) acesse este endpoint da API (necessário para requisições de outros domínios).
-header("Access-Control-Allow-Origin: *");
-// Permite que a requisição inclua o cabeçalho 'Content-Type' (necessário para enviar JSON, por exemplo). Define que o servidor aceita o cabeçalho "Content-Type", o que é comum quando estamos recebendo dados em formato JSON de uma requisição (geralmente um POST). Esse cabeçalho permite que a requisição forneça informações sobre o tipo de conteúdo que está sendo enviado (no caso, "application/json").
-header("Access-Control-Allow-Headers: Content-Type");
-// Define que a resposta do servidor será enviada no formato JSON, e não, por exemplo, HTML ou XML.
-header("Content-Type: application/json");
 
 // A função `file_get_contents("php://input")` é usada para ler os dados enviados no corpo da requisição HTTP. Nesse caso, ela está capturando os dados que foram enviados via POST (geralmente em formato JSON) para o servidor. Lê o corpo da requisição (JSON enviado pelo frontend) e converte em array associativo PHP.
 $data = json_decode(file_get_contents("php://input"), true); //true = array, sem true = objeto

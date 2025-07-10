@@ -1,5 +1,5 @@
 <?php
-    //CONDIGURAÇÕES GERAIS
+    //CONFIGURAÇÕES GERAIS
     // Define as configurações de conexão com o banco de dados. Esses valores são usados para estabelecer a conexão com o banco MySQL.
     // $servidor = "localhost";
     // $banco = "elaine_charm";

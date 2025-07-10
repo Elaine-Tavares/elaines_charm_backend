@@ -66,7 +66,7 @@ echo "Conta ativada com sucesso! Você já pode fazer login.";
 
 // O comando `header()` envia um cabeçalho HTTP para o navegador, redirecionando o usuário para uma nova URL. Nesse caso, o usuário será redirecionado para a página 'criarConta' do frontend, passando o parâmetro `sucesso=1` na URL. Isso pode ser usado para mostrar uma mensagem de sucesso na página de criação de conta ou fazer outras ações no frontend
 // header("Location: http://localhost:5173/entrar?sucesso=1");
-header("Location: http://localhost:5173/criarConta?sucesso=1");
+echo json_encode("Location:https://ecommerce-react-php-theta.vercel.app/entrar?sucesso=1");
 // O comando `exit()` interrompe a execução do script após o redirecionamento para garantir que nada mais seja executado.
 exit();
 
