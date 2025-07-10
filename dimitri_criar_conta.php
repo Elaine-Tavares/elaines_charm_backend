@@ -1,4 +1,9 @@
 <?php
+//No InfinityFree, os erros não aparecem diretamente na tela, por segurança. Você precisa ativar a exibição de erros ou usar logs.
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 //IMPORTA O ARQUIVO ONDE ESTÁ DEFINIDA A CONEXÃO COM O BANCO DE DADOS, FORNECENDO A VARIÁVEL $pdo (utilizado nas consultas SQL) PARA INTERAGIR COM O BANCO. ISSO É IMPORTANTE PARA GARANTIR QUE A CONEXÃO COM O BANCO ESTEJA ESTABELECIDA CORRETAMENTE ANTES DE PROSSEGUIR COM QUALQUER VERIFICAÇÃO.
 require './dimitri/dimitri_conexao.php';  
 
