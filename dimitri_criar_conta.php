@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 //IMPORTA O ARQUIVO ONDE ESTÁ DEFINIDA A CONEXÃO COM O BANCO DE DADOS, FORNECENDO A VARIÁVEL $pdo (utilizado nas consultas SQL) PARA INTERAGIR COM O BANCO. ISSO É IMPORTANTE PARA GARANTIR QUE A CONEXÃO COM O BANCO ESTEJA ESTABELECIDA CORRETAMENTE ANTES DE PROSSEGUIR COM QUALQUER VERIFICAÇÃO.
-require './dimitri/dimitri_conexao.php';  
+require './dimitri_conexao.php';  
 
 //CARREGAM AS CLASSES DO PHPMailer USADO PARA ENVIAR E-MAIL DE CONFIRMAÇÃO
 // A linha abaixo importa a classe PHPMailer, que é responsável por enviar e-mails
