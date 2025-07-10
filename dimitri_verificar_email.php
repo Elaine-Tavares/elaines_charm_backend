@@ -1,6 +1,6 @@
 <?php
 //IMPORTA O ARQUIVO ONDE ESTÁ DEFINIDA A CONEXÃO COM O BANCO DE DADOS, FORNECENDO A VARIÁVEL $pdo (utilizado nas consultas SQL) PARA INTERAGIR COM O BANCO. ISSO É IMPORTANTE PARA GARANTIR QUE A CONEXÃO COM O BANCO ESTEJA ESTABELECIDA CORRETAMENTE ANTES DE PROSSEGUIR COM QUALQUER VERIFICAÇÃO.
-require './dimitri/dimitri_conexao.php';  
+require './dimitri_conexao.php';    
 
 // Captura o valor do parâmetro 'codigo' enviado pela URL (método GET). Quando o usuário clicar no link enviado por e-mail, o código de verificação será passado na URL. O operador de coalescência nula `??` verifica se o parâmetro 'codigo' foi fornecido. Se sim, o valor será atribuído à variável `$codigo`. Se não (ou seja, se 'codigo' não existir na URL), será atribuído um valor padrão vazio (''). Isso evita erros de "índice indefinido" e garante que a variável sempre tenha um valor definido.
 $codigo = $_GET['codigo'] ?? '';

@@ -1,5 +1,5 @@
 <?php
-require './dimitri/dimitri_conexao.php'; // conexão com banco
+require './dimitri_conexao.php'; // conexão com banco
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
